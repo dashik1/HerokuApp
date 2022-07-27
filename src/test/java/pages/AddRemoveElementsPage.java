@@ -6,6 +6,11 @@ import org.openqa.selenium.WebDriver;
 
 
 public class AddRemoveElementsPage extends BasePage {
+    private By ADD_ELEMENT_BUTTON = By.xpath("//button[text()='Add Element']");
+    private By DELETE_BUTTON = By.xpath("//button[text()='Delete']");
+    private By FIRST_CHILD = By.cssSelector("#elements > button:first-child");
+    private By LAST_CHILD = By.cssSelector("#elements > button:last-child");
+
     public AddRemoveElementsPage(WebDriver driver) {
         super(driver);
     }
@@ -13,11 +18,6 @@ public class AddRemoveElementsPage extends BasePage {
     public void openAddRemoveElementsPage() {
         driver.get(Urls.ADD_REMOVE_ELEMENTS);
     }
-
-    private By ADD_ELEMENT_BUTTON = By.xpath("//button[text()='Add Element']");
-    private By DELETE_BUTTON = By.xpath("//button[text()='Delete']");
-    private By FIRST_CHILD = By.cssSelector("#elements > button:first-child");
-    private By LAST_CHILD = By.cssSelector("#elements > button:last-child");
 
 
     public void addElement() {
