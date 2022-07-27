@@ -6,6 +6,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class InputsPage extends BasePage {
+
+    private By INPUT_FIELD = By.xpath("//input[@type='number']");
+
     public InputsPage(WebDriver driver) {
         super(driver);
     }
@@ -13,8 +16,6 @@ public class InputsPage extends BasePage {
     public void openInputsPage() {
         driver.get(Urls.INPUTS);
     }
-
-    private By INPUT_FIELD = By.xpath("//input[@type='number']");
 
     public void clickUp() {
         driver.findElement(INPUT_FIELD).sendKeys(Keys.ARROW_UP);

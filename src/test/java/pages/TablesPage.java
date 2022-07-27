@@ -5,13 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TablesPage extends BasePage {
-    public TablesPage(WebDriver driver) {
-        super(driver);
-    }
-
-    public void openTablesPage() {
-        driver.get(Urls.TABLES);
-    }
 
     private By EMAIL_TABLE_1 = By.xpath("//table[@id='table1']/tbody/tr[2]/td[3]");
     private By FIRST_NAME_TABLE_1 = By.xpath("//table[@id='table1']/tbody/tr[2]/td[2]");
@@ -21,6 +14,13 @@ public class TablesPage extends BasePage {
     private By DUE_TABLE_2 = By.xpath("//table[@id='table2']/tbody/tr[2]/td[4]");
     private By WEBSITE_TABLE_2 = By.xpath("//table[@id='table2']/tbody/tr[2]/td[5]");
 
+    public TablesPage(WebDriver driver) {
+        super(driver);
+    }
+
+    public void openTablesPage() {
+        driver.get(Urls.TABLES);
+    }
 
     public String getFirstNameTable1() {
         return driver.findElement(FIRST_NAME_TABLE_1).getText();
